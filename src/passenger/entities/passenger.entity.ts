@@ -8,7 +8,7 @@ export class Passenger {
 
   @OneToOne(()=> Person, person => person.id, {onDelete: 'SET NULL'})
   @JoinColumn()
-  person_id: Person
+  person: Person
 
 
 

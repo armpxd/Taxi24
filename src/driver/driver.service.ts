@@ -5,9 +5,9 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class DriverService {
-  constructor(
-    @InjectRepository(Driver)
-    private readonly driverRepository: Repository<Driver>,
-    private readonly entityManager: EntityManager,
-  ) {}
+  // constructor(
+  //   @InjectRepository(Driver)
+  //   private readonly driverRepository: Repository<Driver>,
+  //   private readonly entityManager: EntityManager,
+  // ) {}
 }

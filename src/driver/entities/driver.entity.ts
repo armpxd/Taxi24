@@ -15,11 +15,11 @@ export class Driver {
 
   @OneToOne(() => Person, (person) => person.id, { onDelete: 'SET NULL' })
   @JoinColumn()
-  person_id: Person;
+  person: Person;
 
   @OneToOne(() => Location, (location) => location.id, { onDelete: 'SET NULL' })
   @JoinColumn()
-  location_id: Location;
+  location: Location;
 
   @Column()
   available: boolean;
