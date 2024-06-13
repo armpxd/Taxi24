@@ -1,22 +1,26 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Location } from 'src/location/entities/location.entity';
+import { Person } from 'src/person/entities/person.entity';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToOne,
+  JoinColumn,
+} from 'typeorm';
 
 @Entity('drive')
 export class Driver {
   @PrimaryGeneratedColumn()
-  driver_id: number;
+  id: number;
+
+  @OneToOne(() => Person, (person) => person.id, { onDelete: 'SET NULL' })
+  @JoinColumn()
+  person_id: Person;
+
+  @OneToOne(() => Location, (location) => location.id, { onDelete: 'SET NULL' })
+  @JoinColumn()
+  location_id: Location;
 
   @Column()
-  name: string;
-
-  @Column()
-  phone: string;
-
-  @Column('decimal', { precision: 9, scale: 6, nullable: true })
-  latitude: number;
-
-  @Column('decimal', { precision: 9, scale: 6, nullable: true })
-  longitude: number;
-
-  @Column({ default: true })
-  is_available: boolean;
+  available: boolean;
 }
