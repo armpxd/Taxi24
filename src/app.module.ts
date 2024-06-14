@@ -5,6 +5,8 @@ import { PassengerModule } from './passenger/passenger.module';
 import { DbModule } from './db/db.module';
 import { ConfigModule } from '@nestjs/config';
 import { LocationModule } from './location/location.module';
+import { InvoiceModule } from './invoice/invoice.module';
+import { RideModule } from './ride/ride.module';
 
 @Module({
   imports: [
@@ -13,9 +15,9 @@ import { LocationModule } from './location/location.module';
     PassengerModule,
     PersonModule,
     LocationModule,
-    // DriverModule,
-    // InvoiceModule,
-    // RideModule,
+    DriverModule,
+    InvoiceModule,
+    RideModule,
   ],
   controllers: [],
   providers: [],
