@@ -4,15 +4,16 @@ import { PersonModule } from './person/person.module';
 import { PassengerModule } from './passenger/passenger.module';
 import { DbModule } from './db/db.module';
 import { ConfigModule } from '@nestjs/config';
+import { LocationModule } from './location/location.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     DbModule,
-    // PassengerModule,
-    // DriverModule,
+    PassengerModule,
     PersonModule,
-    // LocationModule,
+    LocationModule,
+    // DriverModule,
     // InvoiceModule,
     // RideModule,
   ],
