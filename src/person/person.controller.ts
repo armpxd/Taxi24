@@ -1,9 +1,16 @@
 // person/person.controller.ts
-import { Controller, Get, Post, Put, Delete, Param, Body } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Put,
+  Delete,
+  Param,
+  Body,
+} from '@nestjs/common';
 import { PersonService } from './person.service';
 import { Person } from './entities/person.entity';
-import { CreatePersonDto } from './entities/person.dto';
-
+import { PersonDto } from './entities/person.dto';
 
 @Controller('api/persons')
 export class PersonController {
@@ -15,12 +22,15 @@ export class PersonController {
   }
 
   @Post()
-  async create(@Body() personData: CreatePersonDto): Promise<CreatePersonDto> {
+  async create(@Body() personData: PersonDto): Promise<PersonDto> {
     return this.personService.create(personData);
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() personData: CreatePersonDto): Promise<CreatePersonDto> {
+  async update(
+    @Param('id') id: string,
+    @Body() personData: PersonDto,
+  ): Promise<PersonDto> {
     const personId = parseInt(id, 10);
     return this.personService.update(personId, personData);
   }

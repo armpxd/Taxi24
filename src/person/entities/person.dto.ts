@@ -6,7 +6,7 @@ import {
   IsEmail,
 } from 'class-validator';
 
-export class CreatePersonDto {
+export class PersonDto {
   @IsString()
   @MinLength(2, {
     message: 'The name must have at least 2 characters.',
