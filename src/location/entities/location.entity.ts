@@ -6,8 +6,8 @@ export class Location {
   id: number;
 
   @Column()
-  latitude: string;
+  latitude: number;
 
   @Column()
-  longitude: string;
+  longitude: number;
 }
