@@ -2,6 +2,7 @@
 import { Controller, Get, Post, Put, Delete, Param, Body } from '@nestjs/common';
 import { PersonService } from './person.service';
 import { Person } from './entities/person.entity';
+import { CreatePersonDto } from './entities/person.dto';
 
 
 @Controller('api/persons')
@@ -14,12 +15,12 @@ export class PersonController {
   }
 
   @Post()
-  async create(@Body() personData: Partial<Person>): Promise<Person> {
+  async create(@Body() personData: CreatePersonDto): Promise<CreatePersonDto> {
     return this.personService.create(personData);
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() personData: Partial<Person>): Promise<Person> {
+  async update(@Param('id') id: string, @Body() personData: CreatePersonDto): Promise<CreatePersonDto> {
     const personId = parseInt(id, 10);
     return this.personService.update(personId, personData);
   }
