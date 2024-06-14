@@ -4,7 +4,7 @@ import { PersonService } from './person.service';
 import { Person } from './entities/person.entity';
 
 
-@Controller('persons')
+@Controller('api/persons')
 export class PersonController {
   constructor(private readonly personService: PersonService) {}
 
@@ -13,22 +13,16 @@ export class PersonController {
     return this.personService.findAll();
   }
 
-//   @Get(':id')
-//   async findOneById(@Param('id') id: string): Promise<Person> {
-//     const personId = parseInt(id, 10);
-//     return this.personService.findOneById(personId);
-//   }
-
   @Post()
   async create(@Body() personData: Partial<Person>): Promise<Person> {
     return this.personService.create(personData);
   }
 
-//   @Put(':id')
-//   async update(@Param('id') id: string, @Body() personData: Partial<Person>): Promise<Person> {
-//     const personId = parseInt(id, 10);
-//     return this.personService.update(personId, personData);
-//   }
+  @Put(':id')
+  async update(@Param('id') id: string, @Body() personData: Partial<Person>): Promise<Person> {
+    const personId = parseInt(id, 10);
+    return this.personService.update(personId, personData);
+  }
 
   @Delete(':id')
   async delete(@Param('id') id: string): Promise<void> {
