@@ -1,4 +1,12 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { PassengerService } from './passenger.service';
 
-@Controller('passenger')
-export class PassengerController {}
+@Controller('api/passenger')
+export class PassengerController {
+//   constructor(private readonly passengersService: PassengerService) {}
+
+//   @Get()
+//   GetAll() {
+//     return this.passengersService.getAll();
+//   }
+}
