@@ -9,9 +9,6 @@ export class PassengerService {
   constructor(
     @InjectRepository(Passenger)
     private readonly passengerRepository: Repository<Passenger>,
-    @InjectRepository(Person)
-    private readonly personRepository: Repository<Person>,
-    private readonly entityManager: EntityManager,
   ) {}
   
   async findAll(): Promise<Passenger[]> {
