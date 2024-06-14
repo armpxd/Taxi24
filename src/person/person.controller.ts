@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 import { PersonService } from './person.service';
 import { Person } from './entities/person.entity';
-import { PersonDto } from './entities/person.dto';
+import { PersonDto } from './dto/person.dto';
 
 @Controller('api/persons')
 export class PersonController {

@@ -17,7 +17,7 @@ import { RideModule } from './ride/ride.module';
     LocationModule,
     DriverModule,
     InvoiceModule,
-    RideModule,
+    // RideModule,
   ],
   controllers: [],
   providers: [],
