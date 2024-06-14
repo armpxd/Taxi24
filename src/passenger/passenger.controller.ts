@@ -1,12 +1,19 @@
-import { Controller, Get } from '@nestjs/common';
+// src/passenger/passenger.controller.ts
+import { Controller, Get, Param } from '@nestjs/common';
 import { PassengerService } from './passenger.service';
+import { Passenger } from './entities/passenger.entity';
 
-@Controller('api/passenger')
+@Controller('api/passengers')
 export class PassengerController {
-//   constructor(private readonly passengersService: PassengerService) {}
+  constructor(private readonly passengerService: PassengerService) {}
 
-//   @Get()
-//   GetAll() {
-//     return this.passengersService.getAll();
-//   }
+  @Get()
+  async findAll(): Promise<Passenger[]> {
+    return this.passengerService.findAll();
+  }
+
+  @Get(':id')
+  async findById(@Param('id') id: number): Promise<Passenger> {
+    return this.passengerService.findById(id);
+  }
 }
