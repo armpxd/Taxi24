@@ -2,8 +2,8 @@ export const personDumbs = [
   {
     name: ' Alvaro',
     lastName: 'Martinez',
-    phoneNumber: ' +1 809 386 6132',
-    email: 'armpmartinez@gmail.com',
+    phoneNumber: ' +1 809 386 5552',
+    email: 'armp@gmail.com',
   },
   {
     name: 'Explorador 1',
