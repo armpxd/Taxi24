@@ -5,9 +5,9 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Driver } from 'src/driver/entities/driver.entity';
-import { Invoice } from 'src/invoice/entities/invoice.entity';
-import { Passenger } from 'src/passenger/entities/passenger.entity';
+import { Driver } from '../driver/entities/driver.entity';
+import { Invoice } from '../invoice/entities/invoice.entity';
+import { Passenger } from '../passenger/entities/passenger.entity';
 import { Ride } from './entities/ride.entity';
 import { EntityManager, Repository } from 'typeorm';
 import { CreateRideDto } from './dto/createRide.dto';

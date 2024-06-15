@@ -68,8 +68,6 @@ describe('PersonController', () => {
         phoneNumber: '+1 809 324 3234',
       };
       const result = await controller.create(personData);
-
-      console.log(result);
       expect(result).toEqual({
         email: 'a.@gmail.com',
         id: 3,

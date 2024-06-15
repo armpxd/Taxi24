@@ -5,7 +5,7 @@ import { Person } from 'src/person/entities/person.entity';
 import { Repository } from 'typeorm';
 import { Driver } from 'src/driver/entities/driver.entity';
 import { Location } from 'src/location/entities/location.entity';
-import { Ride } from 'src/ride/entities/ride.entity';
+import { Ride } from '../../ride/entities/ride.entity';
 import { Invoice } from 'src/invoice/entities/invoice.entity';
 import { personDumbs } from './data-entity/person';
 import { locationsDumbs } from './data-entity/locations';

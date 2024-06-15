@@ -1,5 +1,4 @@
-import { Passenger } from 'src/passenger/entities/passenger.entity';
-import { Ride } from 'src/ride/entities/ride.entity';
+import { Ride } from '../../ride/entities/ride.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,

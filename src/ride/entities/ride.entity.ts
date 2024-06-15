@@ -1,7 +1,7 @@
 
-import { Driver } from 'src/driver/entities/driver.entity';
+import { Driver } from '../../driver/entities/driver.entity';
 import { Location } from '../../location/entities/location.entity';
-import { Passenger } from 'src/passenger/entities/passenger.entity';
+import { Passenger } from '../../passenger/entities/passenger.entity';
 import { Column, Entity, PrimaryGeneratedColumn, JoinColumn, OneToOne, ManyToOne } from 'typeorm';
 
 @Entity()
