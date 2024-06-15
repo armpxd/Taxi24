@@ -16,7 +16,7 @@ import { RideModule } from './ride/ride.module';
     PersonModule,
     LocationModule,
     DriverModule,
-    // InvoiceModule,
+    InvoiceModule,
     RideModule,
   ],
   controllers: [],

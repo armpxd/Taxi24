@@ -181,6 +181,16 @@ export class RideService {
         rideUpdate = await entityManager.update(Ride, id, {
           status: 'finished',
         });
+
+        const date = new Date();
+        const amount = parseInt((Math.random() * 100).toFixed());
+
+        const invoice = this.invoiceRepository.create({
+          ride: rideFound,
+          amount: amount,
+          Date: date,
+        });
+        await entityManager.save(invoice);
       } catch (error) {
         throw new InternalServerErrorException('Error completing ride');
       }
