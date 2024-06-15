@@ -1,5 +1,8 @@
-// person/person.service.ts
-import { Injectable } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Person } from './entities/person.entity';
@@ -14,6 +17,21 @@ export class PersonService {
 
   async findAll(): Promise<Person[]> {
     return await this.personRepository.find();
+  }
+
+  async findById(id: number): Promise<PersonDto> {
+    if (isNaN(id)) {
+      throw new BadRequestException(`Invalid id : ${id} format`);
+    }
+
+    const person: Person = await this.personRepository.findOne({
+      where: { id },
+    });
+
+    if (!person) {
+      throw new NotFoundException(`No found person with id ${id}`);
+    }
+    return person;
   }
 
   async create(personData: PersonDto): Promise<PersonDto> {
