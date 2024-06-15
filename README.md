@@ -66,7 +66,6 @@ Nota: el numero de telefono debe estar en el formato +# ### ####. Ejemplo +1 809
 
 ```
 {
-  {
     "passengerId":"NUMBER",
     "driverId":"NUMBER",
     "startLatitude":"NUMBER",
@@ -74,7 +73,7 @@ Nota: el numero de telefono debe estar en el formato +# ### ####. Ejemplo +1 809
     "endLatitude": "NUMBER",
     "endLongitude":"NUMBER'
 }
-}
+
 ```
 
 - `PATCH /api/complete/:id` Completa un viaje. Requiere pasarle el Id de viaje por parametro.
