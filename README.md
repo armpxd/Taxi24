@@ -27,7 +27,7 @@ La app de taxi24 cuenta con 6 endpoint (passengers, drivers, rides, invoices, lo
 ```
 {
     "name": "TEXT",
-    "lastname": "TEXT",
+    "lastName": "TEXT",
     "phoneNumber": "TEXT",
     "email": "TEXT"
 }
@@ -48,7 +48,7 @@ Nota: el numero de telefono debe estar en el formato +# ### ####. Ejemplo +1 809
 ```
 {
     "name": "TEXT",
-    "lastname": "TEXT",
+    "lastName": "TEXT",
     "phoneNumber": "TEXT",
     "email": "TEXT",
     "latitude": "NUMBER",
@@ -56,7 +56,7 @@ Nota: el numero de telefono debe estar en el formato +# ### ####. Ejemplo +1 809
     "available": "BOOLEAN"
 }
 ```
-
+Nota: el numero de telefono debe estar en el formato +# ### ####. Ejemplo +1 809 364 2161
 ### Viajes
 
 - `GET /api/rides` Obtienes una lista de todos los viajes.
