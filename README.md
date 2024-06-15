@@ -16,7 +16,7 @@ La app de taxi24 cuenta con 6 endpoint (passengers, drivers, rides, invoices, lo
 
 ### Ubicacion
 
-- `GET /locations` Obtienes una lista de todas las ubicaciones
+- `GET /api/locations` Obtienes una lista de todas las ubicaciones
 
 ### Pasajero
 
@@ -61,7 +61,7 @@ Nota: el numero de telefono debe estar en el formato +# ### ####. Ejemplo +1 809
 
 - `GET /api/rides` Obtienes una lista de todos los viajes.
 - `GET /api/rides/:id` Obtienes un viaje. Requiere el parametro id.
-- `GET /api/status/active` Obtiene todos los viajes activos.
+- `GET /api/rides/status/active` Obtiene todos los viajes activos.
 - `POST /api/rides` Crea un viaje enviando por body los siguiente parametros.
 
 ```
@@ -76,12 +76,12 @@ Nota: el numero de telefono debe estar en el formato +# ### ####. Ejemplo +1 809
 
 ```
 
-- `PATCH /api/complete/:id` Completa un viaje. Requiere pasarle el Id de viaje por parametro.
+- `PATCH /api/rides/complete/:id` Completa un viaje. Requiere pasarle el Id de viaje por parametro.
 
 ### Factura
 
-- `GET /invoices` Obtiene lista de todas las facturas.
-- `GET /invoices/:id` Obtiene una factura. requiere el parametro id.
+- `GET /api/invoices` Obtiene lista de todas las facturas.
+- `GET /api/invoices/:id` Obtiene una factura. requiere el parametro id.
 
 # Instalación
 
