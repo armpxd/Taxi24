@@ -1,5 +1,5 @@
 import { Driver } from 'src/driver/entities/driver.entity';
-import { Location } from 'src/location/entities/location.entity';
+import { Location } from '../../location/entities/location.entity';
 import { Passenger } from 'src/passenger/entities/passenger.entity';
 export class GetRideDto {
   constructor(

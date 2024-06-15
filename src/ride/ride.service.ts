@@ -12,7 +12,7 @@ import { Ride } from './entities/ride.entity';
 import { EntityManager, Repository } from 'typeorm';
 import { CreateRideDto } from './dto/createRide.dto';
 import { GetRideDto } from './dto/getRide.dto';
-import { Location } from 'src/location/entities/location.entity';
+import { Location } from '../location/entities/location.entity';
 
 @Injectable()
 export class RideService {

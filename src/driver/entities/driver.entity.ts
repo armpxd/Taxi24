@@ -1,5 +1,5 @@
-import { Location } from 'src/location/entities/location.entity';
-import { Person } from 'src/person/entities/person.entity';
+import { Location } from '../../location/entities/location.entity';
+import { Person } from '../../person/entities/person.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,

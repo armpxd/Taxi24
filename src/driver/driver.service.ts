@@ -11,11 +11,11 @@ import { Driver } from './entities/driver.entity';
 import {
   calculateDistance,
   calculateDistanceBetweenLocations,
-} from 'src/helpers/utils';
+} from '../helpers/utils';
 import { GetDriverDto } from './dto/getDriver.dto';
 import { CreateDriverDto } from './dto/createDriver.dto';
-import { Person } from 'src/person/entities/person.entity';
-import { Location } from 'src/location/entities/location.entity';
+import { Person } from '../person/entities/person.entity';
+import { Location } from '../location/entities/location.entity';
 
 @Injectable()
 export class DriverService {
