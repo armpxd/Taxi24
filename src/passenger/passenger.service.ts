@@ -10,7 +10,7 @@ import { Repository, EntityManager } from 'typeorm';
 import { Passenger } from './entities/passenger.entity';
 import { GetPassengerDto } from './dto/getPassenger.dto';
 import { CreatePassengerDto } from './dto/createPassenger.dto';
-import { Person } from 'src/person/entities/person.entity';
+import { Person } from '../person/entities/person.entity';
 
 @Injectable()
 export class PassengerService {
