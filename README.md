@@ -14,15 +14,15 @@ La app de taxi24 cuenta con 6 endpoint (passengers, drivers, rides, invoices, lo
 - `GET /api/persons` Obtienes todas las personas
 - `GET /api/persons/:id` Obtienes una persona. Requiere el parametro id.
 
-## Ubicacion
+### Ubicacion
 
-- `GET /locations` Obtienes una lista de todas las ubicaciones
+- `GET /api/locations` Obtienes una lista de todas las ubicaciones
 
 ### Pasajero
 
 - `GET /api/passengers` Obtienes todos los pasajeros
 - `GET /api/passengers/:id` Obtienes un pasajero. Requiere el parametro id.
-- ` POST /api/passengers` Crea un pasajero enviado por body el siguiente formato
+- `POST /api/passengers` Crea un pasajero enviado por body el siguiente formato
 
 ```
 {
@@ -37,13 +37,13 @@ Nota: el numero de telefono debe estar en el formato +# ### ####. Ejemplo +1 809
 
 ### Conductor
 
-- ` GET /api/drivers` Obtienes todos los conductores.
-- ` GET /api/drivers/:id` Obtienes un conductor. Require el parametro id.
-- ` GET /api/drivers/availables` Obtienes todos los conductores disponibles.
+- `GET /api/drivers` Obtienes todos los conductores.
+- `GET /api/drivers/:id` Obtienes un conductor. Require el parametro id.
+- `GET /api/drivers/availables` Obtienes todos los conductores disponibles.
 - `GET /api/drivers/available3km/:latitude/:longitude` Obtienes una lista de los conductores a 3km de una ubicacion. Requiere los parametros latitude y longitude.
 
-* `GET /api/drivers/findNearbyDrivers/:latitude/:longitude` Obtienes una lista de los 3 condcutores mas cerca a tu punto de partida.
-* `POST /api/drivers` Crea un conductor enviando por body el siguiente formato.
+* `GET /api/drivers/findNearbyDrivers/:latitude/:longitude` Obtienes una lista de los 3 conductores mas cerca a tu punto de partida.
+* `POST /api/drivers` Crea un conductor enviando por body los siguientes parametros.
 
 ```
 {
@@ -61,8 +61,8 @@ Nota: el numero de telefono debe estar en el formato +# ### ####. Ejemplo +1 809
 
 - `GET /api/rides` Obtienes una lista de todos los viajes.
 - `GET /api/rides/:id` Obtienes un viaje. Requiere el parametro id.
-- `GET /api/status/active` Obtiene todos los viajes activos.
-- `POST /api/rides` Crea un viaje enviando por body el siguiente formato.
+- `GET /api/rides/status/active` Obtiene todos los viajes activos.
+- `POST /api/rides` Crea un viaje enviando por body los siguiente parametros.
 
 ```
 {
@@ -76,12 +76,12 @@ Nota: el numero de telefono debe estar en el formato +# ### ####. Ejemplo +1 809
 
 ```
 
-- `PATCH /api/complete/:id` Completa un viaje. Requiere pasarle el Id de viaje por parametro.
+- `PATCH /api/rides/complete/:id` Completa un viaje. Requiere pasarle el Id de viaje por parametro.
 
 ### Factura
 
-- `GET /invoices` Obtiene lista de todas las facturas.
-- `GET /invoices/:id` Obtiene una factura. requiere el parametro id.
+- `GET /api/invoices` Obtiene lista de todas las facturas.
+- `GET /api/invoices/:id` Obtiene una factura. requiere el parametro id.
 
 # Instalación
 
@@ -151,8 +151,15 @@ npm run start:dev
 
 ## Pruebas
 
-Para ejecutar las pruebas unitarias ejecute el siguiente proyecto:
+Para ejecutar las pruebas unitarias ejecute el siguiente comando:
 
 ```bash
 npm run test
+```
+## Data de prueba
+
+Para generar data de prueba debe ejecutar el siguiente comando:
+
+```bash 
+npm run seed:run
 ```
