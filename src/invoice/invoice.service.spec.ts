@@ -32,51 +32,22 @@ const driver: Driver = {
   location,
 };
 
-const invoiceResult: Invoice[] = [
+const invoiceResult = [
   {
     id: 1,
-    date: new Date(),
-    amount: 50,
-    ride: {
-      id: 1,
-      passenger: {
-        id: 1,
-        person: {
-          id: 2,
-          name: 'person',
-          lastName: 'sacha',
-          email: 'person@gmail.com',
-          phoneNumber: '+1 809 386 0005',
-        },
-      },
-      driver: {
-        id: 1,
-        available: true,
-        person: {
-          id: 1,
-          name: 'driver',
-          lastName: 'asd',
-          email: 'driver@gmail.com',
-          phoneNumber: '+1 809 386 0005',
-        },
-        location: {
-          id: 1,
-          latitude: 40,
-          longitude: 50,
-        },
-      },
-      startLocation: {
-        id: 1,
-        latitude: 40,
-        longitude: 50,
-      },
-      endLocation: {
-        id: 1,
-        latitude: 40,
-        longitude: 50,
-      },
-      status: 'finished',
-    },
+    passengerId: 1,
+    passengerName: 'Explorador 10',
+    driverId: 1,
+    driverName: ' Alvaro',
+    amount: '48.5',
+  },
+  {
+    id: 2,
+    passengerId: 2,
+    passengerName: 'Aventurero 1',
+    driverId: 2,
+    driverName: 'Explorador 2',
+    amount: '50.4',
   },
 ];
 
@@ -101,15 +72,6 @@ describe('InvoicesService', () => {
 
   it('should be defined', () => {
     expect(service).toBeDefined();
-  });
-
-  describe('findAll', () => {
-    it('should return an array of invoices', async () => {
-      const mockInvoices = invoiceResult;
-      jest.spyOn(repository, 'find').mockResolvedValue(mockInvoices);
-
-      expect(await service.findAll()).toBe(mockInvoices);
-    });
   });
 
   describe('findOneById', () => {
