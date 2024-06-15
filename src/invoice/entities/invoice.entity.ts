@@ -21,5 +21,5 @@ export class Invoice {
   amount: number;
 
   @Column()
-  Date: Date;
+  date: Date;
 }

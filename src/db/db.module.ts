@@ -7,8 +7,9 @@ import { dataSourceOptions } from './dataSource';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    TypeOrmModule.forRoot(dataSourceOptions)
+    TypeOrmModule.forRoot(dataSourceOptions),
   ],
   exports: [TypeOrmModule],
+  providers: [],
 })
 export class DbModule {}

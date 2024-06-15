@@ -188,7 +188,7 @@ export class RideService {
         const invoice = this.invoiceRepository.create({
           ride: rideFound,
           amount: amount,
-          Date: date,
+          date: date,
         });
         await entityManager.save(invoice);
       } catch (error) {

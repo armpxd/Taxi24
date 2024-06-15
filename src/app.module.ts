@@ -7,6 +7,7 @@ import { ConfigModule } from '@nestjs/config';
 import { LocationModule } from './location/location.module';
 import { InvoiceModule } from './invoice/invoice.module';
 import { RideModule } from './ride/ride.module';
+import { SeedersModule } from './db/seeders/seeders.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { RideModule } from './ride/ride.module';
     DriverModule,
     InvoiceModule,
     RideModule,
+    SeedersModule,
   ],
   controllers: [],
   providers: [],
