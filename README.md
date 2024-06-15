@@ -151,8 +151,15 @@ npm run start:dev
 
 ## Pruebas
 
-Para ejecutar las pruebas unitarias ejecute el siguiente proyecto:
+Para ejecutar las pruebas unitarias ejecute el siguiente comando:
 
 ```bash
 npm run test
+```
+## Data de prueba
+
+Para generar data de prueba debe ejecutar el siguiente comando:
+
+```bash 
+npm run seed:run
 ```
