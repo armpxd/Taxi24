@@ -4,7 +4,8 @@ import { IsPhoneNumber } from 'class-validator';
 export class GetDriverDto {
   constructor(driver: Driver) {
     this.id = driver.id;
-    this.name = `${driver.person.name} ${driver.person.lastName}`;
+    this.name = driver.person.name;
+    this.lastName = driver.person.lastName;
     this.email = driver.person.email;
     this.phoneNumber = driver.person.phoneNumber;
     this.latitude = driver.location.latitude;
@@ -15,6 +16,7 @@ export class GetDriverDto {
   id: number;
 
   name: string;
+  lastName: string;
 
   email: string;
 

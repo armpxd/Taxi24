@@ -1,7 +1,8 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { DriverService } from './driver.service';
 import { Driver } from './entities/driver.entity';
 import { GetDriverDto } from './dto/getDriver.dto';
+import { CreateDriverDto } from './dto/createDriver.dto';
 
 @Controller('api/drivers')
 export class DriverController {
@@ -42,5 +43,10 @@ export class DriverController {
       parseFloat(latitude),
       parseFloat(longitude),
     );
+  }
+
+  @Post()
+  create(@Body() createDriverDto: CreateDriverDto) {
+    return this.driverService.createDriver(createDriverDto);
   }
 }

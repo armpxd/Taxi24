@@ -14,6 +14,11 @@ export class CreateDriverDto {
   @IsNotEmpty()
   name: string;
 
+  @IsString()
+  @MinLength(2, { message: 'Name must have atleast 2 characters.' })
+  @IsNotEmpty()
+  lastName: string;
+
   @IsNotEmpty()
   @IsEmail()
   email: string;
