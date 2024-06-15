@@ -87,13 +87,4 @@ describe('InvoicesController', () => {
       expect(await controller.findAll()).toBe(result);
     });
   });
-
-  // describe('findOneById', () => {
-  //   it('should return a single invoice by ID', async () => {
-  //     const id = '1';
-  //     jest.spyOn(service, 'findOneById').mockResolvedValue(invoiceResult[0]);
-
-  //     expect(await controller.findOneById(id)).toBe(invoiceResult[0]);
-  //   });
-  // });
 });
