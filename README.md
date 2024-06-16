@@ -7,7 +7,7 @@ La app esta hecha con la tecnologia de nestjs en conjunto con la base de datos d
 
 ## Endpoints
 
-La app de taxi24 cuenta con 6 endpoint (passengers, drivers, rides, invoices, locations, persons) para poder interactuar con la app un poco mas abajo detallamos cada uno de ellos
+La app de taxi24 cuenta con 6 controladores (passengers, drivers, rides, invoices, locations, persons) para poder interactuar con la app un poco mas abajo detallamos cada uno de ellos
 
 ### Persona
 
