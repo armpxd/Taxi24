@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Passenger } from 'src/passenger/entities/passenger.entity';
-import { Person } from 'src/person/entities/person.entity';
+import { Passenger } from '../../passenger/entities/passenger.entity';
+import { Person } from '../../person/entities/person.entity';
 import { Repository } from 'typeorm';
-import { Driver } from 'src/driver/entities/driver.entity';
-import { Location } from 'src/location/entities/location.entity';
+import { Driver } from '../../driver/entities/driver.entity';
+import { Location } from '../../location/entities/location.entity';
 import { Ride } from '../../ride/entities/ride.entity';
-import { Invoice } from 'src/invoice/entities/invoice.entity';
+import { Invoice } from '../../invoice/entities/invoice.entity';
 import { personDumbs } from './data-entity/person';
 import { locationsDumbs } from './data-entity/locations';
 import { driversDumbs } from './data-entity/driver';
